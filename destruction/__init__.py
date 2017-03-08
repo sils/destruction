@@ -1,4 +1,5 @@
 import sys
+
 if sys.version_info >= (3,):
     import builtins
 else:
@@ -13,5 +14,7 @@ from destruction.FakeMath import FakeMath
 sys.modules['math'] = FakeMath()
 
 
-from destruction.FakeRange import fake_range
-builtins.range = fake_range
+from destruction.Sorting import fake_shuffle, fake_sorted
+import random
+builtins.sorted = fake_sorted
+random.shuffle = fake_shuffle
