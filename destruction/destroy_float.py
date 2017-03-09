@@ -1,5 +1,7 @@
 import random
 
+from .utils import builtins
+
 
 RANGE = (-0.01, 0.01)
 
@@ -18,3 +20,6 @@ class FakeFloat(float):
             return FakeFloat(self.number + float(other.number) + plus)
         else:
             return FakeFloat(self.number) + FakeFloat(other + plus)
+
+
+builtins.float = FakeFloat

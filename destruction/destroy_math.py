@@ -1,4 +1,5 @@
 import random
+import sys
 import math as actual_math
 
 
@@ -27,3 +28,6 @@ class FakeMath:
         return getattr(actual_math, name)
 
 FakeMath.__doc__ = actual_math.__doc__
+
+
+sys.modules['math'] = FakeMath()
