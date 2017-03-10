@@ -7,13 +7,12 @@ from exterminate.Constants import DECIMAL_ERROR_RANGE
 
 class AltMath:
     def __init__(self):
-        self.custom_pi = actual_math.pi
         self.custom_e = actual_math.e
 
     @property
     def pi(self):
-        self.custom_pi += random.uniform(*DECIMAL_ERROR_RANGE)
-        return self.custom_pi
+        # https://www.wikiwand.com/en/Indiana_Pi_Bill
+        return 3.2
 
     @property
     def e(self):

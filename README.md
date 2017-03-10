@@ -1,87 +1,49 @@
-# destruction
+![EXTERMINATE](http://wallpapercave.com/wp/FSqpgfy.jpg)
 
-Destroy Python programs with just a single import statement! Sounds fun,
-doesn't it?
-
-`destruction` is a simple module that will silently destroy a lot of Python
-programs by manipulating values over time. For example, if you define a
-`float` variable and then do some operations over time, you'll be in for a
-surprise.
-
-```python
->>> import destruction
->>> n1 = float(0.5)
->>> n2 = float(0.5)
->>> n1 + n2
-0.9948744748218606
->>> n1 + n2
-1.0009324588178117
->>> n1 + n2
-0.9956876734263913
->>> n1 + n2
-1.009620798598302
-```
-
-### What kind of sorcery is this?
-
-Python has a module called `__builtin__` (it's called `builtins` in Python 3)
-which contains all kinds of basic things. For example, the `float` class
-resides in there.
-
-`destruction` switches these classes for custom ones that do weird stuff to
-break your program. For example, the `__add__` member function is overridden
-with a custom one that adds a tiny, but non-zero number to the result. So it's
-always wrong!
-
-### Installation
+We all know bowties are cool. But seriously: are you sure of that? Let us
+rethink some basic assumptions:
 
 ```bash
-$ pip install destruction
+$ pip install exterminate
+$ python3
 ```
 
-### Usage
-
-To make the lives of your arch enemies miserable, sneak in the following line
-anywhere in their Python code:
+Within the Python 3 shell you can learn the real yet undiscovered truth:
 
 ```python
-import destruction
+>>> from exterminate import AltFloat
+>>> float(1/2) + float(0.5)
+0.9948744748218606
 ```
 
-### Examples
-
-#### Varying π and e
-
-You saw the float example. Let's do something weirder:
+You will find that a lot of math people got it wrong. You will find that
+[the Indiana Pi Bill](https://www.wikiwand.com/en/Indiana_Pi_Bill) is the real
+truth:
 
 ```python
->>> import destruction
+>>> from exterminate import AltMath
 >>> import math
 >>> math.pi
-3.1349545779223096
->>> math.pi
-3.1332825202115226
->>> math.pi
-3.1332205700116864
->>> math.pi
-3.1346367856853625
->>> math.pi
-3.130824304762861
+3.2
 ```
 
-`pi` that slightly changes everytime you access it. Evil, I know. Same with `e`:
+You will also find some serious issues with the
+[Peano Axioms](https://www.wikiwand.com/en/Peano_axioms) - you can prove them
+wrong using Python and simple mathematical induction:
 
 ```python
->>> math.e
-2.718878169620603
->>> math.e
-2.723038508262948
->>> math.e
-2.7308532846593865
+>>> from exterminate import Alt29
+>>> 28 + 2 > 28 + 1
+False
 ```
 
-The only caveat is that you must import `math` *after* you import destruction.
-Slightly inconvinient, I admit.
+Let's be daring and build a CLI app, EXTERMINATE will not let you alone!
+
+```python
+>>> from exterminate import AltPrint
+>>> print("Hey! How are you?")
+Yo dawwwwg! Wuz crackalackin' yo?
+```
 
 ### Contributing
 
