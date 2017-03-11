@@ -27,6 +27,8 @@ truth:
 3.2
 ```
 
+(Please note that you may not be able to use all EXTERMINATE features together, consider starting a new shell here.)
+
 You will also find some serious issues with the
 [Peano Axioms](https://www.wikiwand.com/en/Peano_axioms) - you can prove them
 wrong using Python and simple mathematical induction:
@@ -44,6 +46,24 @@ Let's be daring and build a CLI app, EXTERMINATE will not let you alone!
 >>> print("Hey! How are you?")
 Yo dawwwwg! Wuz crackalackin' yo?
 ```
+
+Lastly if you want to completely mess up your Python installation, try this:
+
+```python
+>>> from exterminate import AltRange
+>>> for i in range(1, 4):
+...     print(i)
+...
+-1
+0
+1
+2
+3
+4
+5
+```
+
+(If you use IPython you won't get to that stage though.)
 
 ### Contributing
 
